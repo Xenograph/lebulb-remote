@@ -57,7 +57,7 @@ const (
 
 // SendCommand sends the given command to the lightbulb.
 func SendCommand(cmd uint32) error {
-	device, err := os.OpenFile(devicePath, os.O_RDWR, 0)
+	device, err := os.OpenFile(devicePath, os.O_WRONLY, 0)
 	if err != nil {
 		return err
 	}
